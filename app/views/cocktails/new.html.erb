@@ -1,4 +1,5 @@
-<%= form_for [@cocktail] do |f| %>
-  <%= f.text_field :name %>
-  <%= f.submit "add a cocktail" %>
+<%= simple_form_for [@cocktail] do |f| %>
+  <%= f.text_field :name, placeholder: 'Add a name' %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit "Done" %>
 <% end %>
