@@ -2,3 +2,28 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
+
+.banner-container {
+  height: 800px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.banner-img-container {
+  height: 200px;
+  width: 100px;
+  margin: 0 auto;
+  border-color: $light-gray;
+  border-style: solid;
+  border-width: 2px;
+  padding: 5px;
+}
+
+.banner-img {
+  width: 100%;
+}
+
+.index-cards-container {
+  display: flex;
+}
