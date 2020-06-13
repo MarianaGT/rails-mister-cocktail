@@ -1,16 +1,16 @@
-<div class="background">
-  <div class="container" >
+<div>
+  <div>
     <%= image_tag "open.png" %>
     <h1>Enjoy your cocktails!</h1>
     <span>All the recepies you need</span>
-    <a class="btn btn-flat" href="#"><%= link_to "Create a new cocktail", new_cocktail_path %></a>
+    <%= link_to "Create a new cocktail", new_cocktail_path %>
   </div>
-  <div class="card-product">
+  <div>
   <% @cocktails.each do |cocktail| %>
     <% if cocktail.photo.attached? %>
     <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>
     <% end %>
-    <div class="card-product-infos">
+    <div>
       <h2><%= link_to cocktail.name, cocktail_path(cocktail)%></h2>
     </div>
     <% end %>

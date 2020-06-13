@@ -2,13 +2,3 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
-@import "banner";
-@import "card";
-
-$red: #fa4a4e;
-$lightred: #f89b89;
-
-h1 {
-  color: $lightred;
-  text-shadow: 0 0 3px $red;
-}
