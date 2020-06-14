@@ -1,5 +1,16 @@
-<%= simple_form_for [@cocktail] do |f| %>
-  <%= f.text_field :name, placeholder: 'Add a name' %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit "Done" %>
-<% end %>
+<div class="forms-container background-container" style="justify-content: center">
+  <div>
+    <%= image_tag "open24.png", class: "img" %>
+  </div>
+    <p>Create your cocktail:</p>
+    <%= simple_form_for [@cocktail] do |f| %>
+    <%= f.text_field :name, placeholder: 'Add a name' %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit "Done" %>
+    <% end %>
+    <br>
+    <br>
+    <br>
+  <%= link_to "Maybe not. BACK TO COCKTAILS", cocktails_path %>
+</div>
+

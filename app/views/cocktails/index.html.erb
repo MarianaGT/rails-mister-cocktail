@@ -1,18 +1,22 @@
 <div style="background-color: black" >
+
   <div class="banner-container">
     <div class="banner-img-container">
       <%= image_tag "open.png", class: "banner-img" %>
     </div>
   </div>
+
   <div class="index-cards-container">
-  <% @cocktails.each do |cocktail| %>
-    <% if cocktail.photo.attached? %>
-    <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>
-    <% end %>
-    <div>
-      <h2><%= link_to cocktail.name, cocktail_path(cocktail)%></h2>
+
+    <div class="index-cards">
+      <% @cocktails.each do |cocktail| %>
+        <% if cocktail.photo.attached? %>
+        <%= cl_image_tag cocktail.photo.key, height: 100, width: 100, crop: :scale %>
+        <% end %>
+        <p><%= link_to cocktail.name, cocktail_path(cocktail)%></p>
+      <% end %>
     </div>
-    <% end %>
+
   </div>
 
   <%= link_to "Create a new cocktail", new_cocktail_path %>

@@ -1,5 +1,17 @@
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description %>
-  <%= f.association :ingredient, collection: Ingredient.all %>
-  <%= f.button :submit %>
-<% end %>
+<div class="forms-container background-container">
+  <div>
+    <%= image_tag "cocacola.png", class: "img" %>
+  </div>
+  <div class="form-container">
+    <p>How do you prepare it?</p>
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient, collection: Ingredient.all %>
+    <%= f.button :submit %>
+    <% end %>
+    <br>
+    <br>
+    <br>
+  </div>
+  <%= link_to "No idea. BACK TO COCKTAILS", cocktails_path %>
+</div>

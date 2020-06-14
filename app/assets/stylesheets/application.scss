@@ -11,3 +11,36 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+a {
+  color: #ff82bf;
+  text-shadow: 1px 1px 6px $red;
+}
+
+a:hover {
+  color: $yellow;
+  transition: 500ms;
+  text-shadow: 2px 2px 8px $yellow;
+  text-decoration: none;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 8px $yellow;
+  padding: 50px 0 20px 0;
+}
+
+li {
+  color: $light-gray;
+}
+
+i {
+  color: gray;
+}
+
+p {
+  color: white;
+  text-shadow: 2px 2px 8px $yellow;
+  padding: 50px 0 20px 0;
+}
